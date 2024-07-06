@@ -8,30 +8,29 @@
 
 \typeout{NT FILE abstract-pt.tex}%
 
-Independentemente da língua em que a dissertação está escrita, geralmente esta contém pelo menos dois resumos: um resumo na mesma língua do texto principal e outro resumo numa outra língua.
+Nesta dissertação, investigamos o tema da migração de sistemas legados e centralizados de Gerenciamento de 
+Identidade e Acesso (IAM) para frameworks descentralizados de IAM. 
+O IAM descentralizado oferece uma série de novos recursos, capacitando os usuários a ter controle sobre 
+suas identidades e promovendo um cenário de gerenciamento de acesso mais seguro e privado.
 
-A ordem dos resumos varia de acordo com a escola. Se a sua escola tiver regulamentos específicos sobre a ordem dos resumos, o template (\LaTeX) \gls{novathesis} irá respeitá-los. Caso contrário, a regra padrão no template \gls{novathesis} é ter em primeiro lugar o resumo \emph{no mesmo idioma do texto principal} e depois o resumo \emph{no outro idioma}. Por exemplo, se a dissertação for escrita em português, a ordem dos resumos será primeiro o português e depois o inglês, seguido do texto principal em português. Se a dissertação for escrita em inglês, a ordem dos resumos será primeiro em inglês e depois em português, seguida do texto principal em inglês.
-%
-No entanto, esse pedido pode ser personalizado adicionando um dos seguintes ao arquivo \verb+5_packages.tex+.
-
-\begin{verbatim}
-    \abstractorder(<MAIN_LANG>):={<LANG_1>,...,<LANG_N>}
-\end{verbatim}
-
-Por exemplo, para um documento escrito em Alemão com resumos em Alemão, Inglês e Italiano (por esta ordem), pode usar-se:
-\begin{verbatim}
-    \ntsetup{abstractorder={de={de,en,it}}}
-\end{verbatim}
-
-Relativamente ao seu conteúdo, os resumos não devem ultrapassar uma página e frequentemente tentam responder às seguintes questões (é imprescindível a adaptação às práticas habituais da sua área científica):
+No entanto, a integração desses sistemas com a infraestrutura IAM existente apresenta vários desafios. 
+Além de minimizar o tempo de inatividade, uma transição bem-sucedida também exigirá a abordagem de 
+obstáculos como:
 
 \begin{enumerate}
-  \item Qual é o problema?
-  \item Porque é que é um problema interessante/desafiante?
-  \item Qual é a proposta de abordagem/solução?
-  \item Quais são as consequências/resultados da solução proposta?
+  \item Sistemas Heterogêneos: Sistemas IAM legados geralmente não possuem interoperabilidade com a 
+  arquitetura do IAM descentralizado, exigindo estratégias de integração cuidadosas.
+  \item Discrepâncias de Governança: A mudança de um modelo de governança centralizado para um 
+  descentralizado requer o estabelecimento de novas políticas e procedimentos para o gerenciamento de acesso de usuários, em conformidade com as regulamentações existentes nas diversas áreas.
+  \item Educação e Adoção do Usuário: A transição dos usuários de um sistema familiar para um novo, 
+  muitas vezes requer estratégias eficazes de educação e suporte para garantir a adoção e feedback positivo.
 \end{enumerate}
 
+Esta dissertação propõe uma estrutura que aborda esses desafios, facilitando uma migração e 
+integração perfeitas do IAM legado com o IAM descentralizado. 
+Essa estrutura irá pavimentar o caminho para uma transição tranquila que minimize a 
+interrupção da experiência do usuário, promova a integração bem-sucedida do novo modelo de 
+segurança e garanta a adesão contínua aos requisitos de conformidade regulatória.
 % E agora vamos fazer um teste com uma quebra de linha no hífen a ver se a \LaTeX\ duplica o hífen na linha seguinte se usarmos \verb+"-+… em vez de \verb+-+.
 %
 % zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz zzz zzzz comentar"-lhe zzz zzzz zzz zzzz
@@ -43,9 +42,8 @@ Relativamente ao seu conteúdo, os resumos não devem ultrapassar uma página e 
 % Palavra-chave 1, Palavra-chave 2, Palavra-chave 3, Palavra-chave 4
 % \end{keywords}
 \keywords{
-  Primeira palavra-chave \and
-  Outra palavra-chave \and
-  Mais uma palavra-chave \and
-  A última palavra-chave
+  Identity and Access Management (IAM) \and
+  Decentralized IAM \and
+  Identity and Access Management framework
 }
 % to add an extra black line
